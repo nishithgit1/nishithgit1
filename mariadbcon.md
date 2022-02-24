@@ -20,7 +20,7 @@ MariaDB is an open-source relational database management system. As with other r
  
  ## **Install Docker Engine run below commands:-**<br>
 
-2. $ sudo apt install docker.io
+2. $ sudo apt install docker.io <br><br>
 ***Start and Test Docker***
 ## Enable and start the Docker service with:
 3. sudo systemctl start docker
@@ -34,41 +34,39 @@ MariaDB is an open-source relational database management system. As with other r
 
 
 ## Creating a MariaDB Container
-docker run --name mariadbLogical -e MYSQL_ROOT_PASSWORD=password -d mariadb
+docker run --name mariadbtry -e MYSQL_ROOT_PASSWORD=password -d mariadb
 
 9. docker ps -a
 
 ## Starting MariaDB Container
-10. docker restart mariadbLogical
-11. docker start mariadbLogical
-12. docker status mariadbLogical
+10. docker restart mariadbtry
+11. docker start mariadbtry
+12. docker status mariadbtry
 13. docker ps -a
  
 ## Connect mariadb container using below command.
 <br>
 
-14. docker exec -it mariadbLogical bash
+14. docker exec -it mariadbtry bash
 
 ## login to mariadb run following below command. <br>
 15. mysql -u root -p 
 Enter passward : <br>
 16. create Databases run commands:- <br>
-17. create database Keenable; <Here Keenable is my database> <br>
+17. create database internbatch; <Here internbatch is my database> <br>
 18. Check all database run commands like this:-<br>
 19. show databases; <br>
 ## Use Databases run commands like this:-
-20. use Keenable; <here is keenable is my databases>
+20. use internbatch; <here is internbatch is my databases>
 21. create Table in maraiaDB run following commands:-<br>
 - create table <Table_name>(first colume data type(size),second colume data type(size),third colume data type(size),.........); <br><br>
 
-**For Example:-**
-- create table Sheet_Task(SNo int, Attributes varchar(150), Su_Attributes varchar(150),Test_case varchar(150),Max_Rating int, Reema int,Madhu int,Desh_dpk int,Prachi int,Amar int,Aditya int,Nishith int, Dipu int,Manoh int,Paras int,Abdul int,PRIMARY KEY(SNo));
-
  22. **Insert value in table run following commands like this:-** <br>
 insert into <Table_name> values(first columne value,second columne value....................);  <br><br>
-**For Example:-**
- - insert into Sheet_Task values(1,' ','Spreadsheet Excel Sheet','Attributes ,Su-Atributes',1,1,1,1,1,1,1,1,1,1,1,1);
+23. ** Show table data
+    select * from <Table_name>;
 
+ 
 
 
 
